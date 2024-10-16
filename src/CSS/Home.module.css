@@ -1,0 +1,20 @@
+.HomeContainer{
+  font-size: 1.2rem;
+  background-color: rgba(11, 11, 17,0.9);  
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1;  
+  position: relative;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  color: white;  
+  margin: 12rem;
+  text-align: left;
+}
+.Homeh1{
+  font-size: 2.5rem;
+  text-align: center;
+}
+strong{
+  text-decoration: underline;
+
+}

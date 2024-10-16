@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #333; /* Lägg till en bakgrundsfärg om du vill */
+    border-bottom: 2px solid black;
+    width: 100%; /* Detta gör att navbaren tar upp hela bredden */
+    position: fixed; /* Fixar navbaren till toppen av sidan */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Se till att den ligger över andra element */
+   
+}

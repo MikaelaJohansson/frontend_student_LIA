@@ -1,0 +1,29 @@
+.registerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 9rem;
+    font-size: 1.4rem;
+    background-color: rgba(8, 8, 8, 0.9);  
+    padding: 5rem;
+    border-radius: 10px;
+    z-index: 1;  
+    position: relative;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    color: white;  
+    text-align: left;
+   
+}
+input{
+    font-size: 1.2rem;
+}
+.registerContainerh1{
+    font-size: 2.4rem;
+    text-decoration: underline;
+}
+.registerContainerButton{
+    font-size: 1rem;
+    background-color: black;
+    border: 0.5px solid white;
+    color: white;
+}

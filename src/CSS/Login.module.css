@@ -1,0 +1,23 @@
+
+.loginContainer{
+  margin-top: 6rem;
+  font-size: 1.4rem;
+  background-color: rgba(11, 11, 17,0.93);  
+  padding: 4rem;
+  border-radius: 10px;
+  z-index: 1;  
+  position: relative;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+  color: white;  
+  text-align: left;
+}
+.loginContainerButton{
+  font-size: 1rem;
+  background-color: black;
+  border: 0.5px solid white;
+  color: white;
+}
+.loginContainerh1{
+  font-size: 2.5rem;
+  text-align: center;
+}

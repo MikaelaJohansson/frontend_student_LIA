@@ -11,6 +11,32 @@
     top: 0;
     left: 0;
     z-index: 1000; 
-   
-   
 }
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-container:hover::after {
+    content: "Logga ut";
+    position: absolute;
+    top: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.icon-container:hover::after {
+    opacity: 1; 
+}
+
+

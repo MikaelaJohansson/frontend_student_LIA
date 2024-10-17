@@ -62,6 +62,10 @@ const Login = () => {
       <br />
       <Link className={styles.loginlink} to="/">Tillbaka till startsidan</Link> 
       <Link className={styles.loginlink} to="/Register">Ny användare? Skapa konto</Link>
+      <br />
+      <br />
+      <br />
+      <Link className={styles.loginlink} to="/UserPage">Temp länk till User page, sida under utveckling</Link>
     </div>
   )
 }

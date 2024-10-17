@@ -5,14 +5,14 @@ const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
+    const consent = sessionStorage.getItem('cookieConsent');
     if (!consent) {
       setShowBanner(true);
     }
   }, []);
 
   const handleAccept = async () => {
-    localStorage.setItem('cookieConsent', 'granted');
+    sessionStorage.setItem('cookieConsent', 'granted');
     setShowBanner(false);
 
     try {
@@ -29,7 +29,7 @@ const CookieConsent = () => {
   };
 
   const handleDecline = () => {
-    localStorage.setItem('cookieConsent', 'declined');
+    sessionStorage.setItem('cookieConsent', 'declined');
     setShowBanner(false);
   };
 

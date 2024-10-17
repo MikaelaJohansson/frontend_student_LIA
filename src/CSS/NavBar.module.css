@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    background-color: rgba(51, 51, 51, 0.9);
+    color: rgb(251, 249, 249);
+    background-color: rgba(11, 11, 17,0.93); 
     border-bottom: 2px solid black;
     width: 100%; 
     position: fixed; 
@@ -25,7 +25,7 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: rgb(254, 253, 253);
     padding: 5px;
     border-radius: 5px;
     white-space: nowrap;

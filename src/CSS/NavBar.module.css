@@ -4,12 +4,13 @@
     justify-content: space-between;
     align-items: center;
     color: white;
-    background-color: #333; /* Lägg till en bakgrundsfärg om du vill */
+    background-color: rgba(51, 51, 51, 0.9);
     border-bottom: 2px solid black;
-    width: 100%; /* Detta gör att navbaren tar upp hela bredden */
-    position: fixed; /* Fixar navbaren till toppen av sidan */
+    width: 100%; 
+    position: fixed; 
     top: 0;
     left: 0;
-    z-index: 1000; /* Se till att den ligger över andra element */
+    z-index: 1000; 
+   
    
 }

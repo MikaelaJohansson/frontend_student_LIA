@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from "../CSS/Register.module.css";  
+import { Link } from 'react-router-dom';
+import axios from "axios";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -8,9 +10,35 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [pitch, setPitch] = useState("");
   const [link, setLink] = useState("");
+  const [csrfToken,setCsrfToken]=useState("");
+
+  useEffect(()=>{
+    axios.patch("api")
+    .then(Response =>{
+      setCsrfToken(Response.data.csrfToken);
+    })
+    .catch(error =>{
+      console.error("fel vid hämtning av csrf-token")
+    })
+  },[]);
 
   const handleRegister = async () => {
-    // Kanske ett API-anrop här
+    try {
+      const response = await axios.post("api", {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+        pitch: pitch,
+        link: link,
+        csrfToken: csrfToken
+      });
+  
+      console.log(response.data); 
+  
+    } catch (error) {
+      console.error("Fel vid registrering", error);
+    }
   };
 
   return (
@@ -76,7 +104,11 @@ const Register = () => {
         <br />
         <br />
         <button className={styles.registerContainerButton} type="button" onClick={handleRegister}>Registrera dig</button>
+        <br />
+        <Link className={styles.regLink} to="/Login">Logga in</Link> 
+        <Link className={styles.regLink} to="/">Tillbaka till startsidan</Link>
       </form>
+     
     </div>
   );
 };

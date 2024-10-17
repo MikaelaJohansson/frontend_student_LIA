@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from "../CSS/CookieConsent.module.css"; 
 
 const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
@@ -11,7 +12,6 @@ const CookieConsent = () => {
   }, []);
 
   const handleAccept = async () => {
-   
     localStorage.setItem('cookieConsent', 'granted');
     setShowBanner(false);
 
@@ -36,10 +36,12 @@ const CookieConsent = () => {
   if (!showBanner) return null;
 
   return (
-    <div style={{ position: 'fixed', bottom: 0, backgroundColor: 'lightgray', padding: '20px', width: '100%' }}>
-      <p>Vi använder cookies för att förbättra din upplevelse. Godkänn våra cookies?</p>
-      <button onClick={handleAccept}>Acceptera</button>
-      <button onClick={handleDecline}>Neka</button>
+    <div className={styles.cookieOverlay}> 
+      <div className={styles.cookieBanner}> 
+        <p>Vi använder cookies för att förbättra din upplevelse. Godkänn våra cookies?</p>
+        <button onClick={handleAccept}>Acceptera</button>
+        <button onClick={handleDecline}>Neka</button>
+      </div>
     </div>
   );
 };
